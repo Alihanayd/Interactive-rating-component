@@ -1,0 +1,231 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --orange: hsl(25, 97%, 53%);
+  --white: hsl(0, 0%, 100%);
+  --lightGray: rgb(149, 158, 172);
+  --mediumGray: hsl(216, 12%, 54%);
+  --darkBlue: hsl(213, 19%, 18%);
+  --veryDarkBlue: hsl(216, 12%, 8%);
+  --fontFamily: "Overpass", sans-serif;
+}
+body {
+  background: var(--veryDarkBlue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+}
+.bigbox {
+  background: rgb(30, 37, 47);
+  padding: 30px;
+
+  width: 30%;
+  border-radius: 10px;
+}
+.icon {
+  background: rgb(37, 47, 55);
+
+  padding: 10px;
+  border-radius: 50%;
+  display: inline-flex;
+}
+.heading {
+  font-family: var(--fontFamily);
+  color: var(--white);
+  font-size: 25px;
+  font-weight: 400;
+  margin-top: 30px;
+}
+.paragraph {
+  font-family: var(--fontFamily);
+  color: var(--lightGray);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+}
+.stars {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+.star {
+  width: 45px;
+  height: 45px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: transparent;
+  border-radius: 50%;
+  display: flex;
+  color: var(--lightGray);
+  font-family: var(--fontFamily);
+  font-weight: 400;
+  cursor: pointer;
+  transition: 0.2s all ease-in-out;
+
+  background: rgb(37, 47, 55);
+}
+.star:hover {
+  color: var(--white);
+  background: var(--orange);
+}
+.submit {
+  display: flex;
+  justify-content: center;
+}
+.submit-button {
+  background: var(--orange);
+  border: transparent;
+  border-radius: 20px;
+  color: var(--white);
+  font-family: var(--fontFamily);
+  width: 100%;
+  padding: 10px;
+  text-transform: uppercase;
+  margin-top: 30px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: 0.2s all ease-in-out;
+}
+.submit-button:hover {
+  background: var(--white);
+  color: var(--orange);
+}
+.active {
+  background-color: rgb(149, 158, 172);
+  color: white;
+  transition: 0.2s all ease-in-out;
+}
+.image-container {
+  text-align: center;
+}
+#second-state {
+  display: none;
+}
+.rating-text-container {
+  text-align: center;
+  color: var(--orange);
+  font-family: var(--fontFamily);
+  font-weight: 400;
+  font-size: 13px;
+  margin-top: 30px;
+}
+.rating-text {
+  background: rgb(37, 47, 55);
+  border-radius: 20px;
+  padding: 7px 15px;
+}
+.description {
+  text-align: center;
+  padding: 5px;
+}
+.swal-modal {
+  background-color: var(--darkBlue);
+  color: var(--white);
+  border-radius: 20px;
+}
+.swal-text,
+.swal-title {
+  color: var(--white);
+  font-family: var(--fontFamily);
+}
+.swal-button {
+  background-color: var(--orange);
+  transition: 0.2s all ease-in-out;
+}
+.swal-button:hover {
+  background-color: var(--orange) !important;
+  transform: scale(1.2);
+}
+.icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.social-media {
+  font-size: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.social-media i {
+  margin: 0 6px;
+  color: var(--orange);
+  cursor: pointer;
+  transition: 0.2s all ease-in-out;
+}
+.fa-twitter:hover {
+  color: #00acee;
+  /* box-shadow: 0 0 5px 5px var(--veryDarkBlue); */
+  /* background-color: var(--veryDarkBlue); */
+  animation-name: flip;
+  animation-duration: 1s;
+  animation-iteration-count: 2;
+}
+.fa-instagram:hover {
+  color: #e1306c;
+  animation-name: rainbow;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+.fa-github:hover {
+  color: white;
+  animation: bigboi 2s;
+
+  /* transform: scale(2); */
+}
+@keyframes flip {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(-360deg);
+  }
+}
+@keyframes rainbow {
+  0% {
+    color: #5851db;
+  }
+  12% {
+    color: #833ab4;
+  }
+  25% {
+    color: #c13584;
+  }
+  33% {
+    color: #e1306c;
+  }
+  50% {
+    color: #fd1d1d;
+  }
+  62% {
+    color: #e1306c;
+  }
+  75% {
+    color: #c13584;
+  }
+  86% {
+    color: #833ab4;
+  }
+  100% {
+    color: #5851db;
+  }
+}
+@keyframes bigboi {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(720deg);
+  }
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/9a462f6574.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Frontend Mentor | Interactive rating component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Rating state start -->
+    <div id="bigBox" class="bigbox">
+      <div class="icon-container">
+        <div class="icon">
+          <img src="./images/icon-star.svg" alt="star icon" />
+        </div>
+        <div class="social-media">
+          <a href="https://twitter.com/alihanayd1n" target="_blank"
+            ><i class="fa fa-twitter"></i
+          ></a>
+          <a href="https://instagram.com/alihan.aydinn" target="_blank">
+            <i class="fa fa-instagram"></i
+          ></a>
+          <div class="github">
+            <a href="http://github.com/Alihanayd" target="_blank"
+              ><i class="fa fa-github"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="text">
+        <h1 class="heading">How did we do?</h1>
+        <br />
+        <p class="paragraph">
+          Please let us know how we did with your support request. All feedback
+          is appreciated to help us improve our offering!
+        </p>
+      </div>
+      <div class="stars">
+        <button id="first" value="1" class="star" onclick="setActive(this.id)">
+          1
+        </button>
+        <button id="second" value="2" class="star" onclick="setActive(this.id)">
+          2
+        </button>
+        <button id="third" value="3" class="star" onclick="setActive(this.id)">
+          3
+        </button>
+        <button id="fourth" value="4" class="star" onclick="setActive(this.id)">
+          4
+        </button>
+        <button id="fifth" value="5" class="star" onclick="setActive(this.id)">
+          5
+        </button>
+      </div>
+      <div class="submit">
+        <button id="submitButton" class="submit-button">Submit</button>
+      </div>
+    </div>
+
+    <!-- Rating state end -->
+
+    <!-- Thank you state start -->
+    <div id="second-state" class="bigbox">
+      <div class="image-container">
+        <img src="./images/illustration-thank-you.svg" alt="" />
+      </div>
+      <div class="rating-text-container">
+        <span id="rating-text" class="rating-text"></span>
+      </div>
+      <div class="description">
+        <h1 class="heading">Thank you!</h1>
+        <br />
+        <p class="paragraph">
+          We appreciate you taking the time to give a rating. If you ever need
+          more support, don’t hesitate to get in touch!
+        </p>
+      </div>
+      <div class="homepage-button">
+        <button
+          id="goback-button"
+          class="submit-button"
+          onClick="window.location.reload();"
+        >
+          Go Back
+        </button>
+      </div>
+    </div>
+
+    <!-- Thank you state end -->
+    <!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div> -->
+
+    <script src="index.js"></script>
+  </body>
+</html>
